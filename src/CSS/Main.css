@@ -1,0 +1,78 @@
+/* 
+applies to the content div on all pages
+used to push elements down below the Navbar
+*/
+.content{
+    margin-top: 50px;
+}
+
+/* disable anchor tags */
+.disabled-link {
+    pointer-events: none;
+}
+
+/* 
+applies to all popup
+used to fix the position of the popup to the center of the screen
+*/
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 40%;
+    max-width: 40%;
+
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255,255, 255, 0.6);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255,255,255,0.3)
+
+}
+/* moves the popup close button to top right */
+.popup .btn-close {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+}
+html.popup-visible {
+    position: relative;
+}
+  
+
+html.popup-visible::after {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    position: fixed;
+}
+
+
+.feedback-message {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.nav-button {
+    font-family: "Calibri";
+    opacity: 1;
+  }
+
+
+#alert{
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    position: absolute;
+    text-align: center;
+}
